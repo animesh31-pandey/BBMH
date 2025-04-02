@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBMH (Brijesh Bangar Memorial Hospital)</title>
+    <link rel="icon" href="https://m.media-amazon.com/images/I/61ae-mRACmL._AC_UF1000,1000_QL80_.jpg">
+    <link rel="stylesheet" href="ent.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Appointment.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+</head>
+<body>
+    <div class="contact">
+        <a href="/#" ><i class="fa-solid fa-phone"></i>+01-12424323</a>
+        <a href="/#" ><i class="fa-solid fa-envelope"></i>BangarHospital@gamil.com</a></a>
+        <div class="social">
+            <a href="/#"></a>
+            <div class="media">
+                <a href="/#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="media">
+                <a href="/#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sticky-bar">
+        
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://brijeshbangerhospital.com/images/vlogobg.png" alt="Logo" height="50">
+                    </a>
+
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a   href="/aboutBBMH"  class="nav-link dropdown-toggle"id="aboutDropdown" role="button" data-bs-toggle="dropdown">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/aboutBBMH">About BBMH</a></li>
+                                    <li><a class="dropdown-item" href="/empanelments">Empanelments</a></li>
+                                    <li><a class="dropdown-item" href="/doct">Our Doctors</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="/specialities" class="nav-link dropdown-toggle"  id="servicesDropdown" role="button" data-bs-toggle="dropdown">services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/specialities">All Specilities</a></li>
+                                        <li><a class="dropdown-item" href="/ent">ENT</a></li>
+                                        <li><a class="dropdown-item" href="/Gynecology">Gynecology</a></li>
+                                        <li><a class="dropdown-item" href="/Gastrology">Gastroenterology</a></li>
+                                        <li><a class="dropdown-item" href="/Neurosurgery">Neurosurgery</a></li>
+                                        <li><a class="dropdown-item" href="/JointReplacement">Joint Replacement</a></li>
+                                        <li><a class="dropdown-item" href="/OrthoPedic">Orthopaedic</a></li>
+                                        <li><a class="dropdown-item" href="/Plasticsurgery">Plastic Surgery</a></li>
+                                        <li><a class="dropdown-item" href="/SportsInjuries">Sports Injury</a></li>
+                                        <li><a class="dropdown-item" href="/Urology">Urology</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="/news">News & Media</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/blogs">Blogs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/appointment">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="icon">
+            <a href="#"><img src="https://babajiayurveda.in/images/about-nabh.png" alt="Logo"></a>
+        </div>
+    </div>
+
+
+    
+        <div id="overlay" class="overlay"></div>
+        <button id="toggleBtn" class="toggle-arrow"><span>Book Appointment</span><i></i></button>
+        <section id="appointmentSection">
+            <!-- Background Video -->
+            <video autoplay muted loop id="bg-video">
+                <source src="" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        
+            <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-start">
+                <div class="video-container">
+                    <video autoplay muted loop id="bg-video">
+                        <source src="" type="video/mp4">
+                    </video>
+                   
+              
+                <!-- Left Section -->
+                <div style="width: 80%; margin-left: 10vw; margin-top: 5vw;">
+                    <h1>Book Appointment</h1>
+                    <br><br>
+                    <form method="POST" action="/appointments" class="row g-3 needs-validation" novalidate>
+                        <select class="form-select" name="appointment[department]" aria-label="Default select example" required>
+                            <option selected>Open this select menu</option>
+                            <option value="Urology">Urology</option>
+                            <option value="neuro">Neuro</option>
+                            <option value="ENT">ENT</option>
+                            <option value="Gynecology">Gynecology</option>
+                            <option value="Gastroenterology">Gastroenterology</option>
+                            <option value="Joint Replacement">Joint Replacement</option>
+                            <option value="Orthopaedic">Orthopaedic</option>
+                            <option value="Sports Injury">Sports Injury</option>
+                            <option value="plastic Surgery">Plastic Surgery</option>
+                        </select>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Patient Name</label>
+                            <input type="text" class="form-control" id="validationCustom01" name="appointment[patientName]" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustomUsername" class="form-label">Phone No.</label>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" id="validationCustomUsername" name="appointment[phone]" maxlength="10" pattern="\d{10}" required>
+                                <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="validationCustom03" name="appointment[Date]" required>
+                            <div class="invalid-feedback">Please provide a valid Date.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustomTime" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="validationCustomTime" name="appointment[time]" required>
+                            <div class="invalid-feedback">Please provide a valid time.</div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div><br><br>
+            </div>
+        </div>  
+        </section>
+    
+      
+    
+    <div class="container2">
+        <div>
+        <h1>BBMH Hospital – Best Orthopedic Hospital in Bhilwara</h1>
+        <img src="https://www.chaudharyhospital.in/wp-content/uploads/2020/05/Orthopedics-1-1.png" alt="" class="img">
+        <p>
+            BBMH Hospital is renowned for its commitment to orthopedic excellence and patient care. Located in Bhilwara, it stands out as one of the best orthopedic hospitals in the region, dedicated to diagnosing and treating a wide range of musculoskeletal conditions. With a team of highly skilled orthopedic specialists, the hospital provides both surgical and non-surgical treatment options tailored to each patient’s needs.
+        </p><br>
+        <p>Recognizing the integral role the skeletal system plays in overall body functionality, BBMH Hospital emphasizes the importance of rapid diagnosis and intervention for injuries. Whether dealing with joint pain, sports injuries, or complex back problems, patients receive comprehensive care designed to facilitate quick recovery and restore mobility.</p>
+    </div>
+    <div >
+        <h2>Some of the common Orthopedics problems are: </h2>
+        <ul>
+            <li>
+                <p><strong>Joint Pain</strong></p>
+                <ol>
+                    <li>Can affect any joint in the body.</li>
+                    <li>Common among older adults and athletes.</li>
+                </ol>
+            </li>
+            <li>
+                <p><strong>Sports Injuries</strong></p>
+                <ol>
+                    <li>Injuries like sprains, strains, and fractures.</li>
+                    <li>Often occur in high-impact sports.</li>
+                </ol>
+            </li>
+            <li>
+                <p><strong>Back Problems</strong></p>
+                <ol>
+                    <li>Includes conditions like herniated discs and sciatica.</li>
+                    <li>Can result from poor posture or lifting heavy objects.</li>
+                </ol>
+            </li>
+            <li>
+                <p><strong>Tendon Injuries</strong></p>
+                <ol>
+                    <li>Includes tendonitis and ruptures.</li>
+                    <li>Often related to overuse or sudden injuries.</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="container3">
+    <div class="wrapper" style="margin-top: 8vh;">
+        <img src="https://www.theneoorthopaedicclinic.com/wp-content/uploads/2023/10/orthopaedic-conditions.jpg" alt="">
+        <div class="intro">
+            <h2>Symptoms of Orthopedics Conditions :</h2>
+            <ol>
+                <li>Muscle spasms.</li>
+                <li>Swelling of the diseased area. </li>
+                <li>Warmth and redness due to infection or inflammation.</li>
+                <li>Numbness or Weakness. </li>
+                <li>The unusual appearance of joints.</li>
+                <li>Joint stiffness and limited motion. </li>
+                <li>Fatigue connects with joint pain or swelling.</li>
+            </ol>
+        </div>
+    </div>
+<hr>
+    <div class="wrapper1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbaQfYraVyYbLKWLxVbvNqJAcZmd-LvsQDMA&s" alt="">
+        <div class="intro1">
+            <h2>Some Serious Orthopedics Symptoms </h2>
+            <ol>
+                <li>Hearing a snapping, grinding, or popping sound during the injury.</li>
+                <li>Severe pain or swelling</li>
+                <li>Deformity of a joint or bone.</li>
+                <li>Hard to move a joint or extremity.</li>
+                <li>An open wound or bone sticking through the skin. </li>
+            </ol>
+        </div>
+    </div>
+<hr>
+</div>
+<div class="video-container">
+   
+
+    <div style="padding: 2vh;">    
+                <h2>Why BBMH Hospital is the Best Orthopedic Hospital in Bhilwara</h2>
+                <p>BBMH Hospital is recognized as one of the leading orthopedic hospitals in Bhilwara, offering top-quality orthopedic services that prioritize patient care and recovery.</p><br>
+                <p>The dedicated team at BBMH Hospital utilizes the latest research and advanced medical techniques to address a wide range of orthopedic conditions. Specialists provide comprehensive treatment for disorders affecting bones, joints, and other musculoskeletal structures.</p>
+                <p>Orthopedic surgeons at BBMH Hospital specialize in the care of joints, ligaments, tendons, and bones. Their expertise ensures that patients receive the best guidance in the following areas:</p>
+                <ul>
+                    <li><b>Injury Treatment:</b> Addressing injuries sustained from physical activities or accidents.</li>
+                    <li><b>Chronic Condition Management:</b> Helping patients with conditions that worsen over time, such as osteoarthritis and osteoporosis.
+                    </li>
+                    <li><b>Pain Relief:</b> Focusing on alleviating discomfort through a variety of treatment options tailored to individual needs.</li>
+                </ul>
+                <p>The Orthopedics department at BBMH Hospital comprises a team of experienced surgeons, physiotherapists, and pain management experts who collaborate to provide a comprehensive rehabilitation strategy for each patient, ensuring a path toward a healthier, more active life.</p>
+            </div>   
+            </div>
+
+        </div>
+        
+        
+        <div class="footer">
+            <h3>Our Insurance Partner</h3>
+            <div class="moving-div">
+                <div class="outer" style="height: 10vh;">
+                    <div class="move">
+                        <img src="https://profitmust.com/wp-content/uploads/2021/07/Star-Health-IPO.jpg" alt="">
+                        <img src="https://cdn.prod.website-files.com/6145f7156a1337613524d548/63208639822f976940a1f5e2_TPA__raksha%20TPA.png" alt="">
+                        <img src="https://play-lh.googleusercontent.com/I5n8WLg0Ya40MTk010Ay5mhCi2jBjTGgnDjQ8OruRvpFSokomN27w0Rf9MJSzJkgYA" alt="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/HDFC-Ergo-logo.png" alt="">
+                        <img src="https://media.licdn.com/dms/image/v2/C560BAQGAha_oBgKaDw/company-logo_200_200/company-logo_200_200/0/1631322330360?e=2147483647&v=beta&t=7mH7sBlar5PPhOJ0S43uOvJyqfzhWdJV7yVEXqgcBZA" alt="">
+                        <img src="https://cdn.oasr.in/oa-site/cms-uploads/media/SBI_logo_new_3cd6b90057.png" alt="">
+                        <img src="//cdn.prod.website-files.com/6145f7156a1337613524d548/62ebb5454447c185f1c58ea8_Health-india-tpa-1.jpg" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKRO_YHaPk0P3ucN04-RWQIRqFZo7xTtz-WQ&s" alt="">
+                        <img src="https://cdn.prod.website-files.com/6145f7156a1337613524d548/63f45bf57df68f599b344a05_logo__Acko.png" alt="">
+                        <img src="https://healthysure.in/wp-content/uploads/2023/07/png-clipart-logo-brand-public-relations-product-icici-lombard-travel-insurance-text-public-relations-removebg-preview.png" alt="">
+                        <img src="https://cdn.policyx.com/cms-media/apollo-munich-health-insurance-logo-web2876-1728020579.webp" alt="">
+                        <img src="https://cdn.prod.website-files.com/6145f7156a1337613524d548/632085aeaf68ca0fe183d5b2_TPA__safeway.png" alt="">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2024/6/425895977/PZ/MT/RV/149898913/2560px-reliance-general-insurance-svg.png" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUA7Ur0Turi441GiVfuBGNch260XZrdEHSHA&s" alt="">
+                        <img src="https://m.economictimes.com/thumb/msid-73152868,width-1200,height-900,resizemode-4,imgsize-145233/bajaj-allianz-general-insurance.jpg" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSllPs93kRZNQAFsq1HqrMw50rBXWFaqkLo776dnPXYVwUXMd9x6SownOXoQYNP3D0uCIA&usqp=CAU" alt="">
+                        <img src="https://www.goodmoneying.com/wp-content/uploads/2012/07/126.Max-Bupa.png" alt="">
+                        <img src="https://profitmust.com/wp-content/uploads/2021/07/Star-Health-IPO.jpg" alt="">  
+                        </div>
+                </div>
+            </div>
+                <div class="link">
+                    <div class="link1">
+                        <img src="https://brijeshbangerhospital.com/images/vlogobg.png" alt="BBMH.img">
+                        <p>
+                            BBMH Hospital has steadily grown to provide such care to not just the local community, but also the international patients.</p>
+                    </div>
+                    <div class="link2">
+                        <h4>Useful Links</h4>
+                        <div>
+                            <ul>
+                                <li><a href="/aboutBBMH">About Hospital</a></li>
+                                <li><a href="/doctors">Our Doctors</a></li>
+                                <li><a href="/blogs">Blog</a></li>
+                                <li><a href="/news">News & Media</a></li>
+                                <li><a href="/appointment">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link2">
+                        <h4>Our Departments</h4>
+                        <div>
+                            <ul>
+                                <li><a href="/Gynecology">Gynaecology</a></li>
+                                <li><a href="/Neurosurgery">Neurosurgery</a></li>
+                                <li><a href="/Plasticsurgery">Plastic Surgery</a></li>
+                                <li><a href="/Urology">Urology</a></li>
+                                <li><a href="/ent">ENT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link2">
+                        <h4>Contact Us</h4>
+                        <div>
+                            <ul>
+                                <li><h6><i class="fa-solid fa-location-dot"></i> R C Vyas Colony, Bhilwara, Rajasthan 311001 </h6></li>
+                                <li><h6><i class="fa-solid fa-phone"></i> +0139194932</h6></li>
+                                <li><h6><i class="fa-solid fa-envelope"></i> BangarHospital@gamil.com</h6></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>⚠️ Disclaimer: The information on the Web Site is provided for informational purposes only and is not meant to substitute the advice provided by our doctor or other health care professional. You should not use the information available on or through the Web Site for treating a health problem or disease or prescribing any medication. All images used on this website are for illustrative purposes only,</p>
+            </div>
+            <div class="rights"><h6>&copy; 2025 BBMH Bhilwara. All Rights Reserved.</h6></div>
+       
+
+    <script >
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("toggleBtn").addEventListener("click", function() {
+                let appointmentSection = document.getElementById("appointmentSection");
+                appointmentSection.style.display = (appointmentSection.style.display === "none" || appointmentSection.style.display === "") ? "block" : "none";
+              
+            });
+        });
+ 
+    
+     
+
+        document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("toggleBtn").addEventListener("click", function() {
+        let section = document.getElementById('appointmentSection');
+        let offset = 200; 
+        window.scrollTo({
+    top: 10,
+    behavior: "smooth"
+});
+    });
+});
+    </script>
+
+<script >
+    (() => {
+'use strict'
+const forms = document.querySelectorAll('.needs-validation')
+Array.from(forms).forEach(form => {
+  form.addEventListener('submit', event => {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+    form.classList.add('was-validated')
+  }, false)
+})
+})();
+</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="index.js"></script> 
+</body>
+</html>

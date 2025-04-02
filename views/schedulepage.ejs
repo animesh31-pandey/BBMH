@@ -1,0 +1,44 @@
+
+<!-- Doctor Schedule Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Schedule</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <h2>Update Your Availability</h2>
+    <form action="/updateAvailability" method="POST">
+        
+        <!-- Available Days -->
+        <label>Available Days:</label><br>
+        <input type="checkbox" name="availableDays" value="Monday"> Monday
+        <input type="checkbox" name="availableDays" value="Tuesday"> Tuesday
+        <input type="checkbox" name="availableDays" value="Wednesday"> Wednesday
+        <input type="checkbox" name="availableDays" value="Thursday"> Thursday
+        <input type="checkbox" name="availableDays" value="Friday"> Friday
+        <input type="checkbox" name="availableDays" value="Saturday"> Saturday
+        <input type="checkbox" name="availableDays" value="Sunday"> Sunday
+        <br><br>
+
+        <!-- Available Time -->
+        <label for="startTime" name="">Start Time:</label>
+        <input type="time" id="startTime" name="startTime" required>
+
+        <label for="endTime">End Time:</label>
+        <input type="time" id="endTime" name="endTime" required>
+
+        <br><br>
+
+        <!-- Available Date -->
+        <label for="availableDate">Available Date:</label>
+        <input type="date" id="availableDate" name="availableDate" required>
+
+        <br><br>
+
+        <button type="submit">Update Schedule</button>
+    </form>
+</body>
+</html>

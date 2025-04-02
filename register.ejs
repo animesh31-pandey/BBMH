@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/register.css">
+</head>
+<body>
+    <form action="/register" method="POST" id="Signupform" autocomplete="off">
+        <h2>Doctor Signup</h2>
+        
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required autocomplete="new-password"/>
+
+        <div class="col-md-6">
+            <label for="disease" class="form-label" name="department">Department</label>
+            <select class="form-select" name="department" id="disease" required>
+                <option value="" disabled selected>Select a Department</option>
+                <option value="Urology">Urology</option>
+                <option value="Neuro">Neuro</option>
+                <option value="ENT">ENT</option>
+                <option value="Gynecology">Gynecology</option>
+                <option value="Gastroenterology">Gastroenterology</option>
+                <option value="Joint Replacement">Joint Replacement</option>
+                <option value="Orthopaedic">Orthopaedic</option>
+                <option value="Sports Injury">Sports Injury</option>
+                <option value="Plastic Surgery">Plastic Surgery</option>
+            </select>
+        </div>
+
+        <button type="submit">Register</button>
+        <a href="/login">Already have an account? Login</a>
+    </form>
+
+    <script>
+        (function() {
+            const form = document.getElementById("Signupform");
+            const emailInput = form.querySelector('input[name="email"]');
+            const passwordInput = form.querySelector('input[name="password"]');
+            const nameInput = form.querySelector('input[name="name"]');
+            const departmentInput=form.querySelector(`select[name="department"]`)
+            // Delay clearing the values to bypass autofill
+            setTimeout(() => {
+                form.reset();
+                emailInput.value = '';
+                passwordInput.value = '';
+                nameInput.value='';
+                departmentInput.value='';
+            }, 50);
+        })();
+    </script>
+</body>
+</html>

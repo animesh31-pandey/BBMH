@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBMH (Brijesh Bangar Memorial Hospital)</title>
+    <link rel="icon" href="https://m.media-amazon.com/images/I/61ae-mRACmL._AC_UF1000,1000_QL80_.jpg">
+    <link rel="stylesheet" href="ent.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Appointment.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+</head>
+<body>
+    <div class="contact">
+        <a href="/#" ><i class="fa-solid fa-phone"></i>+01-12424323</a>
+        <a href="/#" ><i class="fa-solid fa-envelope"></i>BangarHospital@gamil.com</a></a>
+        <div class="social">
+            <a href="/#"></a>
+            <div class="media">
+                <a href="/#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="media">
+                <a href="/#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sticky-bar">
+        
+        <div class="menu">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://brijeshbangerhospital.com/images/vlogobg.png" alt="Logo" height="50">
+                    </a>
+
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a   href="/aboutBBMH"  class="nav-link dropdown-toggle"id="aboutDropdown" role="button" data-bs-toggle="dropdown">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/aboutBBMH">About BBMH</a></li>
+                                    <li><a class="dropdown-item" href="/empanelments">Empanelments</a></li>
+                                    <li><a class="dropdown-item" href="/doct">Our Doctors</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="/specialities" class="nav-link dropdown-toggle"  id="servicesDropdown" role="button" data-bs-toggle="dropdown">services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/specialities">All Specilities</a></li>
+                                        <li><a class="dropdown-item" href="/ent">ENT</a></li>
+                                        <li><a class="dropdown-item" href="/Gynecology">Gynecology</a></li>
+                                        <li><a class="dropdown-item" href="/Gastrology">Gastroenterology</a></li>
+                                        <li><a class="dropdown-item" href="/Neurosurgery">Neurosurgery</a></li>
+                                        <li><a class="dropdown-item" href="/JointReplacement">Joint Replacement</a></li>
+                                        <li><a class="dropdown-item" href="/OrthoPedic">Orthopaedic</a></li>
+                                        <li><a class="dropdown-item" href="/Plasticsurgery">Plastic Surgery</a></li>
+                                        <li><a class="dropdown-item" href="/SportsInjuries">Sports Injury</a></li>
+                                        <li><a class="dropdown-item" href="/Urology">Urology</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="/news">News & Media</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/blogs">Blogs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/appointment">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="icon">
+            <a href="#"><img src="https://babajiayurveda.in/images/about-nabh.png" alt="Logo"></a>
+        </div>
+    </div>
+
+
+    
+        <div id="overlay" class="overlay"></div>
+        <button id="toggleBtn" class="toggle-arrow"><span>Book Appointment</span><i></i></button>
+        <section id="appointmentSection">
+            <!-- Background Video -->
+            <video autoplay muted loop id="bg-video">
+                <source src="" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        
+            <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-start">
+                <div class="video-container">
+                    <video autoplay muted loop id="bg-video">
+                        <source src="" type="video/mp4">
+                    </video>
+                   
+              
+                <!-- Left Section -->
+                <div style="width: 80%; margin-left: 10vw; margin-top: 5vw;">
+                    <h1>Book Appointment</h1>
+                    <br><br>
+                    <form method="POST" action="/appointments" class="row g-3 needs-validation" novalidate>
+                        <select class="form-select" name="appointment[department]" aria-label="Default select example" required>
+                            <option selected>Open this select menu</option>
+                            <option value="Urology">Urology</option>
+                            <option value="neuro">Neuro</option>
+                            <option value="ENT">ENT</option>
+                            <option value="Gynecology">Gynecology</option>
+                            <option value="Gastroenterology">Gastroenterology</option>
+                            <option value="Joint Replacement">Joint Replacement</option>
+                            <option value="Orthopaedic">Orthopaedic</option>
+                            <option value="Sports Injury">Sports Injury</option>
+                            <option value="plastic Surgery">Plastic Surgery</option>
+                        </select>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Patient Name</label>
+                            <input type="text" class="form-control" id="validationCustom01" name="appointment[patientName]" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustomUsername" class="form-label">Phone No.</label>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" id="validationCustomUsername" name="appointment[phone]" maxlength="10" pattern="\d{10}" required>
+                                <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="validationCustom03" name="appointment[Date]" required>
+                            <div class="invalid-feedback">Please provide a valid Date.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustomTime" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="validationCustomTime" name="appointment[time]" required>
+                            <div class="invalid-feedback">Please provide a valid time.</div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div><br><br>
+            </div>
+        </div>  
+        </section>
+    
+      
+    
+    <div class="container2">
+        <div>
+        <h1>BBMH Hospital – Best Urology Hospital in bhilwara</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD1-GaQV6YVaVXp0fF12bjllkKzgEGycCrUA&s" alt="" class="img">
+        <p>
+            Urology is a branch of medicine that deals with the problems of the urinary system in both males and females. It is a very important department in our hospital as it deals with some very delicate and sensitive organs.
+        </p><br>
+        <p>The urinary system includes the kidneys, ureters, bladder, and urethra, and any problems with these organs can cause a lot of discomfort and pain. Urology also deals with the problems of the reproductive system in males. Some of the common problems that urologists deal with are kidney stones, urinary tract infections, prostate problems, bladder problems, and so on.</p>
+    </div>
+    <div>
+        <h2>Some Urology Procedures & Treatment in BBMH</h2>
+
+        <h3>PCNL (Percutaneous Nephrolithotomy Surgery): </h3>
+        <p>This kind of surgery is done to remove stones in the kidney in case they are not able to pass on their own. Our team of doctors offers this minimally invasive surgery so that the patient suffers from minimum risk and big stones are removed from the patient’s body.</p>
+        <br>
+        <h3>URS (Ureterorenoscopy): </h3>
+        <p>This treatment is used for ureter stones. It is a minimally invasive surgery in which the team of doctors at BBMH hospital uses a small telescope that is passed through the urethra into the ureter in order to remove stones.</p>
+        <br>
+        <h3>Laparoscopic radical prostatectomy:</h3>
+        <p>We offer this minimally invasive procedure for the treatment of prostate cancer. In this, some part or whole of the prostate gland is removed along with any lymph nodes containing cancerous that may be located close to the gland. The surgeon makes small incisions to access the prostate and laparoscopic techniques are used to perform prostatectomy.</p>
+        <br>
+        <h3>Paediatric urology:</h3>
+        <p>Paediatric urology is a special branch of urology that deals with diagnoses, treatment, and management of urinary and genital problems of small children. Our team of paediatric urologists ensures that all diseases related to the urinary tract and genitals of your child are treated with care.</p>
+        <br>
+        <h3>Urine Retention:</h3>
+        <p>Urine Retention is the inability to empty the bladder completely. This can be gradual or sudden. Our team of experts at bbmh Hospital diagnoses and treat the underlying cause behind urinary retention. The patients are offered treatment in accordance with the severity of their symptoms. It could be due to bladder weakness, bladder stones, benign prostatic hyperplasia, etc.</p>
+        <br>
+    
+    </div>
+        
+   
+    
+    <div class="container3">
+    <div class="wrapper" style="margin-top: 8vh;">
+        <img src="https://wp04-media.cdn.ihealthspot.com/wp-content/uploads/sites/374/2020/04/urologicalconditions-768x452.jpg" alt="">
+        <div class="intro">
+            <h2>Functions of Urology</h2>
+            <p>
+                Urology is a specialized branch of medicine that focuses on the diagnosis and treatment of disorders related to the urinary tract and male reproductive system. This field encompasses a wide range of conditions, including urinary incontinence, kidney stones, bladder infections, and prostate issues. Urologists are highly trained to perform both medical and surgical interventions, utilizing advanced technologies such as minimally invasive techniques and robotic surgery to enhance patient recovery and outcomes. 
+            </p>
+        </div>
+    </div>  
+</div>  
+<hr>
+<div class="video-container">
+    
+   
+
+    <div style="padding: 2vh;">    
+                <h2>Some of the most found Urologic Diseases:</h2>
+                <p>Below-mentioned is some of the common urologic disorders:</p>
+                <h6><strong>Benign Prostatic Hyperplasia:</strong></h6>
+                <p>Benign Prostatic Hyperplasia is defined as the Expand in the size of the prostate gland, which is mostly found in older men. BPH can directly invite cancer, and its symptoms can be noticed by the pressure that an increased prostate can place on the urethra. The urethra is defined as the narrow tube that takes urine from the bladder and then relieves it out of the body. </p>
+                <br>
+                <h6><strong>Urinary Incontinence:</strong></h6>
+                <p>Urinary Incontinence is caused when the bladder becomes uncontrollable, which results in the inconvenient leakage of urine. Some of these most common causes include:</p>
+                <br>
+                <ol type="i">
+                    <li>Diabetes</li>
+                    <li>Urinary tract infections</li>
+                    <li>Spinal Cord injury</li>
+                    <li>Severe Constipation</li>
+                    <li>Parkinson’s and Multiple Sclerosis kind of diseases</li>
+                    <li>Weak bladder Muscles</li>
+                    <li>Pregnancy or Childbirth</li>
+                </ol>
+                <br>
+                <h6><strong>Urinary Tract Infections:</strong></h6>
+                <p>UTI is caused to pathogenic bacteria or viruses that enter the urinary tract and give birth to unwanted infection. These are most commonly found in women, and least in men. Some of the common symptoms are burning sensation during urination, frequent need to urinate, and feeling more to urinate even after urinating. </p>
+                <br>
+                <h6><strong>Kidney and Ureteral Stones:</strong></h6>
+                <p>Kidney Stone is one of the most common problems noticed nowadays. Stones are found in the kidney when there are crystals in the urine or small particles collect or surround these crystals. These stones can cause extensive pain and can also block the way of urine flow. Small stones can be easily discharged from the patient’s body, but larger ones need to be solved on time otherwise they can be problematic. </p>
+                <br>
+            </div>   
+            </div>
+
+        </div>
+    </div>      
+
+
+    <div class="footer">
+        <h3>Our Insurance Partner</h3>
+        <div class="moving-div">
+            <div class="outer" style="height: 10vh;">
+                <div class="move">
+                    <img src="https://profitmust.com/wp-content/uploads/2021/07/Star-Health-IPO.jpg" alt="">
+                    <img src="https://cdn.prod.website-files.com/6145f7156a1337613524d548/63208639822f976940a1f5e2_TPA__raksha%20TPA.png" alt="">
+                    <img src="https://play-lh.googleusercontent.com/I5n8WLg0Ya40MTk010Ay5mhCi2jBjTGgnDjQ8OruRvpFSokomN27w0Rf9MJSzJkgYA" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/HDFC-Ergo-logo.png" alt="">
+                    <img src="https://media.licdn.com/dms/image/v2/C560BAQGAha_oBgKaDw/company-logo_200_200/company-logo_200_200/0/1631322330360?e=2147483647&v=beta&t=7mH7sBlar5PPhOJ0S43uOvJyqfzhWdJV7yVEXqgcBZA" alt="">
+                    <img src="https://cdn.oasr.in/oa-site/cms-uploads/media/SBI_logo_new_3cd6b90057.png" alt="">
+                    <img src="//cdn.prod.website-files.com/6145f7156a1337613524d548/62ebb5454447c185f1c58ea8_Health-india-tpa-1.jpg" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKRO_YHaPk0P3ucN04-RWQIRqFZo7xTtz-WQ&s" alt="">
+                    <img src="https://cdn.prod.website-files.com/6145f7156a1337613524d548/63f45bf57df68f599b344a05_logo__Acko.png" alt="">
+                    <img src="https://healthysure.in/wp-content/uploads/2023/07/png-clipart-logo-brand-public-relations-product-icici-lombard-travel-insurance-text-public-relations-removebg-preview.png" alt="">
+                    <img src="https://cdn.policyx.com/cms-media/apollo-munich-health-insurance-logo-web2876-1728020579.webp" alt="">
+                    <img src="https://cdn.prod.website-files.com/6145f7156a1337613524d548/632085aeaf68ca0fe183d5b2_TPA__safeway.png" alt="">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2024/6/425895977/PZ/MT/RV/149898913/2560px-reliance-general-insurance-svg.png" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUA7Ur0Turi441GiVfuBGNch260XZrdEHSHA&s" alt="">
+                    <img src="https://m.economictimes.com/thumb/msid-73152868,width-1200,height-900,resizemode-4,imgsize-145233/bajaj-allianz-general-insurance.jpg" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSllPs93kRZNQAFsq1HqrMw50rBXWFaqkLo776dnPXYVwUXMd9x6SownOXoQYNP3D0uCIA&usqp=CAU" alt="">
+                    <img src="https://www.goodmoneying.com/wp-content/uploads/2012/07/126.Max-Bupa.png" alt="">
+                    <img src="https://profitmust.com/wp-content/uploads/2021/07/Star-Health-IPO.jpg" alt="">  
+                    </div>
+            </div>
+        </div>
+            <div class="link">
+                <div class="link1">
+                    <img src="https://brijeshbangerhospital.com/images/vlogobg.png" alt="BBMH.img">
+                    <p>
+                        BBMH Hospital has steadily grown to provide such care to not just the local community, but also the international patients.</p>
+                </div>
+                <div class="link2">
+                    <h4>Useful Links</h4>
+                    <div>
+                        <ul>
+                            <li><a href="/aboutBBMH">About Hospital</a></li>
+                            <li><a href="/doctors">Our Doctors</a></li>
+                            <li><a href="/blogs">Blog</a></li>
+                            <li><a href="/news">News & Media</a></li>
+                            <li><a href="/appointment">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link2">
+                    <h4>Our Departments</h4>
+                    <div>
+                        <ul>
+                            <li><a href="/Gynecology">Gynaecology</a></li>
+                            <li><a href="/Neurosurgery">Neurosurgery</a></li>
+                            <li><a href="/Plasticsurgery">Plastic Surgery</a></li>
+                            <li><a href="/Urology">Urology</a></li>
+                            <li><a href="/ent">ENT</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link2">
+                    <h4>Contact Us</h4>
+                    <div>
+                        <ul>
+                            <li><h6><i class="fa-solid fa-location-dot"></i> R C Vyas Colony, Bhilwara, Rajasthan 311001 </h6></li>
+                            <li><h6><i class="fa-solid fa-phone"></i> +0139194932</h6></li>
+                            <li><h6><i class="fa-solid fa-envelope"></i> BangarHospital@gamil.com</h6></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>⚠️ Disclaimer: The information on the Web Site is provided for informational purposes only and is not meant to substitute the advice provided by our doctor or other health care professional. You should not use the information available on or through the Web Site for treating a health problem or disease or prescribing any medication. All images used on this website are for illustrative purposes only,</p>
+        </div>
+        <div class="rights"><h6>&copy; 2025 BBMH Bhilwara. All Rights Reserved.</h6></div>
+       
+
+        
+            <!-- Corrected JavaScript -->
+    <script >
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("toggleBtn").addEventListener("click", function() {
+                let appointmentSection = document.getElementById("appointmentSection");
+                appointmentSection.style.display = (appointmentSection.style.display === "none" || appointmentSection.style.display === "") ? "block" : "none";
+              
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("toggleBtn").addEventListener("click", function() {
+        let section = document.getElementById('appointmentSection');
+        let offset = 200; 
+        window.scrollTo({
+    top: 10,
+    behavior: "smooth"
+});
+    });
+});
+    </script>
+
+
+<script >
+    (() => {
+'use strict'
+const forms = document.querySelectorAll('.needs-validation')
+Array.from(forms).forEach(form => {
+  form.addEventListener('submit', event => {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+    form.classList.add('was-validated')
+  }, false)
+})
+})();
+</script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="index.js"></script> 
+</body>
+</html>

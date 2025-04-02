@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome, Dr. <%= doctor.name %></h2>
+   
+    <h2>Specialist: <%= doctor.department %></h2>
+    
+    <h3>Update Your Availability</h3>
+    <br><br><br>
+    <form action="/updateAvailability" method="POST" onsubmit="return validateForm()">
+
+        <!-- Available Days -->
+        <label >Available Dates:</label><br>
+      
+        <input type="text" id="availableDates" name="availableDates" class="form-control" placeholder="Select Available Dates" required>
+     
+        <button type="button" id="selectAllDates" class="btn btn-primary btn-sm">Select All</button>
+        <!-- Include jQuery and jQuery UI -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                let selectedDates = [];
+        
+                $("#availableDates").datepicker({
+                    dateFormat: "yy-mm-dd",
+                    beforeShowDay: function(date) {
+                        let dateString = $.datepicker.formatDate("yy-mm-dd", date);
+                        return [true, selectedDates.includes(dateString) ? "selected-date" : ""];
+                    },
+                    onSelect: function(dateText) {
+                        let index = selectedDates.indexOf(dateText);
+                        if (index > -1) {
+                            selectedDates.splice(index, 1); // Remove date if already selected
+                        } else {
+                            selectedDates.push(dateText); // Add date if not selected
+                        }
+                        $(this).val(selectedDates.join(", ")); // Show selected dates in input
+                    }
+                });
+        
+                // "Select All" button functionality (Next 30 days)
+                $("#selectAllDates").click(function() {
+                    let today = new Date();
+                    selectedDates = [];
+                    
+                    for (let i = 0; i < 30; i++) {
+                        let nextDate = new Date();
+                        nextDate.setDate(today.getDate() + i);
+                        selectedDates.push($.datepicker.formatDate("yy-mm-dd", nextDate));
+                    }
+        
+                    $("#availableDates").val(selectedDates.join(", "));
+                });
+        
+                // Highlight selected dates
+                $("head").append(`
+                    <style>
+                        .selected-date a { 
+                            background-color: #007bff !important; 
+                            color: white !important; 
+                            border-radius: 50%;
+                        }
+                    </style>
+                `);
+            });
+       
+        </script>
+        
+        <!-- Available Time -->
+        <label for="startHour">Start Time:</label>
+        <select id="startHour" name="startHour">
+            <option value="12">12</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+        </select>
+
+        <select id="startMinute" name="startMinute">
+            <option value="00">00</option>
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="45">45</option>
+        </select>
+
+        <select id="startAMPM" name="startAMPM">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select>
+
+        <br><br>
+
+        <label for="endHour">End Time:</label>
+        <select id="endHour" name="endHour">
+            <option value="12">12</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+        </select>
+
+        <select id="endMinute" name="endMinute">
+            <option value="00">00</option>
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="45">45</option>
+        </select>
+
+        <select id="endAMPM" name="endAMPM">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select>
+
+        <br><br>
+
+      
+        <br><br>
+
+        <!-- Hidden input for formatted time -->
+        <input type="hidden" id="formattedTime" name="availableTime">
+
+        <!-- Submit Button -->
+        <button type="submit">Update Availability</button>
+       
+    </form><br>
+    <!-- <form action="/" method="get">
+        <button type="submit">logout</button>
+    </form> -->
+   
+</div>
+    <p id="output"></p>
+
+    <script>
+        function validateForm() {
+            getTimePeriod();  // Ensure `availableTime` is set before submission
+            return true;       // Proceed with form submission
+        }
+    
+        function getTimePeriod() {
+            let startHour = document.getElementById("startHour").value;
+            let startMinute = document.getElementById("startMinute").value;
+            let startAMPM = document.getElementById("startAMPM").value;
+    
+            let endHour = document.getElementById("endHour").value;
+            let endMinute = document.getElementById("endMinute").value;
+            let endAMPM = document.getElementById("endAMPM").value;
+    
+            let timePeriod = `${startHour}:${startMinute} ${startAMPM} - ${endHour}:${endMinute} ${endAMPM}`;
+    
+            console.log("🔹 Selected Time:", timePeriod); // Debugging
+            document.getElementById("formattedTime").value = timePeriod;
+            document.getElementById("output").innerText = `Selected Time: ${timePeriod}`;
+        }
+    
+        // ✅ Ensure `getTimePeriod()` runs before form submission
+        document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("select").forEach(select => {
+        select.addEventListener("change", getTimePeriod);
+    });
+    document.querySelector("form").addEventListener("submit", getTimePeriod);
+});
+
+    </script>
+    
+
+  
+</body>
+</html>

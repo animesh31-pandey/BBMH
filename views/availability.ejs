@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Availability</title>
+</head>
+<body>
+    <h2>Doctor Availability Update</h2>
+    <label>Select Days:</label>
+    <select id="days" multiple>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saterday">Saterday</option>
+        <option value="Sunday">Sunday</option>
+    </select>
+    
+    <label>Start Time:</label>
+    <input type="time" id="startTime">
+    
+    <label>End Time:</label>
+    <input type="time" id="endTime">
+    
+    <button onclick="updateAvailability()">Save</button>
+
+    <script>
+        function updateAvailability() {
+            const doctorId = "DOCTOR_ID_HERE";  // Replace with actual doctor ID
+            const days = Array.from(document.getElementById("days").selectedOptions).map(opt => opt.value);
+            const startTime = document.getElementById("startTime").value;
+            const endTime = document.getElementById("endTime").value;
+            
+            const availability = days.map(day => ({ day, startTime, endTime }));
+            
+            fetch("/api/updateAvailability", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ doctorId, availability })
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message))
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>

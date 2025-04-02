@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Available Slots</title>
+</head>
+<body>
+    <h2>Available Slots</h2>
+    <button onclick="fetchAvailableSlots()">Check Slots</button>
+    <div id="slots"></div>
+
+    <script>
+        function fetchAvailableSlots() {
+            const doctorId = "DOCTOR_ID_HERE";  // Replace with actual doctor ID
+            
+            fetch(`/api/getAvailableSlots/${doctorId}`)
+            .then(response => response.json())
+            .then(slots => {
+                document.getElementById("slots").innerHTML = slots.map(slot =>
+                    `<p>${slot.day}: ${slot.startTime} - ${slot.endTime}</p>`
+                ).join("");
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
